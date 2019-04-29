@@ -1,0 +1,1 @@
+call flaskenv\Scripts\activate & call cmd
