@@ -22,7 +22,7 @@ def exchange_rate_api(country_code):
 def get_exchange_rate(country_code):
         rate = ExchangeRates.query.filter(ExchangeRates.country_code == country_code).first()
         if not rate:
-            return 1
+            return None
         elif datetime.datetime.now() - rate.last_updated >  datetime.timedelta(days=1):
             current_rate = exchange_rate_api(country_code)
             rate.exchange_rate = current_rate
