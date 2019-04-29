@@ -9,7 +9,3 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from app import routes, models
-
-# from app.update_database import update
-#
-# update()
